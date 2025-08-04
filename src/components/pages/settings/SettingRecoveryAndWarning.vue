@@ -1,6 +1,12 @@
 <template>
   <div class="max-w-2xl mx-auto p-6 space-y-8">
     <h3 class="text-2xl font-bold text-gray-900">Khôi phục, bảo vệ và cảnh báo</h3>
+    <p class="text-sm text-red-500">
+      <i>
+        Hãy chắc chắn rằng bạn hiểu rõ mình đang làm gì. <br />
+        Chúng tôi sẽ không chịu bất cứ trách nhiệm pháp lý nào nếu có sự cố xảy ra.
+      </i>
+    </p>
 
     <!-- Phiên đăng nhập -->
     <div class="space-y-6">

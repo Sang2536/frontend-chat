@@ -49,16 +49,17 @@
 import { ref, reactive, onMounted } from 'vue'
 import { useToast } from 'vue-toastification'
 import BaseToggleSwitch from '@/components/base/BaseToggleSwitch.vue'
-import { Save } from 'lucide-vue-next'
+import { LucideLayoutDashboard, Save } from 'lucide-vue-next'
 
 const theme = ref('light')
 
 const displayThemes = reactive([
   { name: 'enableHome', value: true, title: 'Trang chủ', disabled: false },
+  { name: 'dashboard', value: false, title: 'Bảng điều khiển', disabled: false },
   { name: 'enableAboutUs', value: false, title: 'Về chúng tôi', disabled: false },
   { name: 'enableActivityLog', value: false, title: 'Lịch sử hoạt động', disabled: false },
   { name: 'enableBookmark', value: false, title: 'Bookmark', disabled: false },
-  { name: 'enableContact', value: false, title: 'Liên hệ', disabled: false },
+  { name: 'enableContact', value: false, title: 'Kết nối', disabled: false },
   { name: 'enableForYou', value: false, title: 'Dành cho bạn', disabled: false },
   { name: 'enableMedia', value: false, title: 'Media', disabled: false },
   { name: 'enableNotification', value: true, title: 'Thông báo', disabled: false },

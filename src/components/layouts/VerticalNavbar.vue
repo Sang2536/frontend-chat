@@ -34,7 +34,7 @@
         </div>
 
         <div class="flex flex-col items-center mb-4">
-          <DropdownMenu :items="userMenu" :onSelect="handleAction" :icon="LucideUser" position="top-left" />
+          <DropdownMenu :items="userMenu" :label="userStore.currentUser?.name || 'admin@example.com'" :onSelect="handleAction" :icon="LucideUser" position="top-left" />
         </div>
       </div>
     </div>
@@ -51,7 +51,7 @@ import {
   LucideHome, LucideMessageCircle, LucideUsers, LucideSettings, LucideInfo,
   LucideBell, LucideIdCard, LucideStar, LucideLogOut, LucideLogIn,
   LucideUserPlus, LucideBookmark, LucideUser, LucidePencil, LucideSearch,
-  LucideMessageSquareReply, LucideFilePlus
+  LucideMessageSquareReply, LucideFilePlus, LucideLayoutDashboard
 } from 'lucide-vue-next'
 
 import BaseTooltip from '@/components/base/BaseTooltip.vue'
@@ -85,12 +85,13 @@ function hideTooltip() {
 
 const mainNavItems = [
   { name: 'home', label: 'Trang chủ', icon: LucideHome, hideNavbar: false },
+  { name: 'dashboard', label: 'Bảng điều khiển', icon: LucideLayoutDashboard, hideNavbar: true },
   { name: 'chat', label: 'Tin nhắn', icon: LucideMessageCircle, hideNavbar: false },
   { name: 'profile', label: 'Hồ sơ', icon: LucideIdCard, hideNavbar: false },
   { name: 'contact', label: 'Kết nối', icon: LucideUsers, hideNavbar: false },
-  { name: 'bookmark', label: 'Đánh dấu', icon: LucideBookmark, hideNavbar: false },
-  { name: 'for-you', label: 'Dành cho bạn', icon: LucideStar, hideNavbar: false },
-  { name: 'notification', label: 'Thông báo', icon: LucideBell, hideNavbar: false },
+  { name: 'bookmark', label: 'Đánh dấu', icon: LucideBookmark, hideNavbar: true },
+  { name: 'for-you', label: 'Dành cho bạn', icon: LucideStar, hideNavbar: true },
+  { name: 'notification', label: 'Thông báo', icon: LucideBell, hideNavbar: true },
   { name: 'settings', label: 'Cài đặt', icon: LucideSettings, hideNavbar: false },
   { name: 'about-us', label: 'Thông tin', icon: LucideInfo, hideNavbar: false },
 ]
