@@ -5,7 +5,8 @@
       @click="open = !open"
       class="w-10 h-10 rounded-full bg-gray-200 cursor-pointer hover:ring-2 ring-blue-400 flex items-center justify-center"
     >
-      <component :is="icon" class="w-5 h-5 text-gray-600" />
+      <slot v-if="$slots.default" />
+      <component v-else :is="icon" class="w-5 h-5 text-gray-600" />
     </div>
 
     <!-- Dropdown Menu -->
@@ -16,6 +17,9 @@
         class="absolute z-50 w-56 bg-white border border-gray-200 rounded-lg shadow-lg"
         :class="dropdownPositionClass"
       >
+        <div v-if="label" class="border-b border-gray-200 p-4 font-semibold">
+          {{ label }}
+        </div>
         <ul class="py-1">
           <li
             v-for="(item, index) in items"
@@ -86,6 +90,7 @@ interface MenuItem {
 
 const props = defineProps<{
   items: MenuItem[]
+  label?: string
   onSelect?: (value: string) => void
   icon?: Component
   position?: ItemPlacement

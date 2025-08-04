@@ -5,6 +5,7 @@ import Bookmark from '@/pages/Bookmark.vue'
 import Chat from '@/pages/Chat.vue'
 import Contact from '@/pages/Contact.vue'
 import Dashboard from '@/pages/Dashboard.vue'
+import Home from '@/pages/Home.vue'
 import ForYou from '@/pages/ForYou.vue'
 import Login from '@/pages/Login.vue'
 import Media from '@/pages/Media.vue'
@@ -20,8 +21,9 @@ const routes = [
   { path: '/bookmark', component: Bookmark, meta: { layout: 'ChatLayout' } },
   { path: '/chat/:slug?', component: Chat, meta: { layout: 'ChatLayout' } },
   { path: '/contact', component: Contact, meta: { layout: 'ChatLayout' } },
-  { path: '/home', component: Dashboard, meta: { layout: 'ChatLayout' } },
+  { path: '/dashboard', component: Dashboard, meta: { layout: 'ChatLayout' } },
   { path: '/for-you', component: ForYou, meta: { layout: 'ChatLayout' } },
+  { path: '/home', component: Home, meta: { layout: 'ChatLayout' } },
   { path: '/media', component: Media, meta: { layout: 'ChatLayout' } },
   { path: '/notification', component: Notification, meta: { layout: 'ChatLayout' } },
   { path: '/profile/:slug?', component: Profile, meta: { layout: 'ChatLayout' } },

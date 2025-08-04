@@ -46,23 +46,24 @@
 import ContactCard from '@/components/pages/contact/ContactCard.vue'
 
 const friends = [
-  { id: 1, name: 'Nguyễn Văn A', avatar: 'https://i.pravatar.cc/40?img=1' },
-  { id: 2, name: 'Trần Thị B', avatar: 'https://i.pravatar.cc/40?img=2' },
-  { id: 3, name: 'Đinh Thị C', avatar: 'https://i.pravatar.cc/40?img=3' },
-  { id: 4, name: 'Nguyễn Trung D', avatar: 'https://i.pravatar.cc/40?img=3' },
-  { id: 5, name: 'Trần Thu E', avatar: 'https://i.pravatar.cc/40?img=5' },
-  { id: 6, name: 'Hoàng Hoài F', avatar: 'https://i.pravatar.cc/40?img=6' },
+  { id: 1, name: 'Đỗ Phương Linh ', username: 'phuonglinhdo.2k', avatar: 'https://i.pravatar.cc/40?img=1' },
+  { id: 2, name: 'Trần Diệu Anh', username: 'dieu.anh.tran', avatar: 'https://i.pravatar.cc/40?img=2' },
+  { id: 3, name: 'Đinh Ngọc Ánh', username: 'ngocanh.xinhdep', avatar: 'https://i.pravatar.cc/40?img=3' },
+  { id: 4, name: 'Nguyễn Mai Chi', username: 'maichi.nguyen', avatar: 'https://i.pravatar.cc/40?img=3' },
+  { id: 5, name: 'Trần Nhật Hạ', username: 'nhatha2580', avatar: 'https://i.pravatar.cc/40?img=5' },
+  { id: 6, name: 'Hoàng Ngọc lan', username: 'hoang.ngoclan', avatar: 'https://i.pravatar.cc/40?img=6' },
 ]
 
 const groups = [
-  { id: 10, name: 'Nhóm lập trình VueJS', avatar: 'https://i.pravatar.cc/40?img=3' },
-  { id: 11, name: 'Học tiếng Trung', avatar: 'https://i.pravatar.cc/40?img=4' }
+  { id: 10, name: 'Nhóm lập trình VueJS', username: 'laptrinhvuejs.group', avatar: 'https://i.pravatar.cc/40?img=3' },
+  { id: 11, name: 'Học tiếng Trung', username: 'tiengtrungcoban', avatar: 'https://i.pravatar.cc/40?img=4' },
+  { id: 11, name: 'Ẩm thực 3 miền', username: 'amthuc3mien', avatar: 'https://i.pravatar.cc/40?img=4' },
 ]
 
 const pages = [
-  { id: 20, name: 'Trang học IELTS', avatar: 'https://i.pravatar.cc/40?img=5' },
-  { id: 21, name: 'Tin công nghệ', avatar: 'https://i.pravatar.cc/40?img=6' },
-  { id: 22, name: 'Tiếng Anh cơ bản', avatar: 'https://i.pravatar.cc/40?img=7' },
-
+  { id: 20, name: 'Study With Me', username: 'study.with.me', avatar: 'https://i.pravatar.cc/40?img=5' },
+  { id: 20, name: 'Cùng Học IELTS', username: 'cung.hoc.ielts', avatar: 'https://i.pravatar.cc/40?img=5' },
+  { id: 21, name: 'Tin công nghệ', username: 'tincongnghe', avatar: 'https://i.pravatar.cc/40?img=6' },
+  { id: 22, name: 'Tiếng Anh cơ bản', username: 'english.basic', avatar: 'https://i.pravatar.cc/40?img=7' },
 ]
 </script>

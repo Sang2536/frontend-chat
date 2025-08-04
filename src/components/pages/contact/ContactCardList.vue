@@ -1,13 +1,14 @@
 <template>
-  <div class="flex items-center space-x-4 bg-white p-3 rounded shadow hover:bg-gray-50 transition">
-    <img v-if="contact.email === 'admin@example.com'"
-      :src="contact.avatar"
-      alt="avatar"
-      class="w-10 h-10 rounded-full object-cover"
-    />
-    <DropdownMenu v-else :items="userMenu" :label="contact.username" :onSelect="handleAction" position="bottom-left">
-      <img :src="contact.avatar" class="w-10 h-10 rounded-full" />
-    </DropdownMenu>
+  <div class="flex items-center space-x-3">
+    <div>
+      <div class="flex flex-col items-center mb-4">
+        <img v-if="contact.email === 'admin@example.com'" :src="contact.avatar" class="w-10 h-10 rounded-full" />
+
+        <DropdownMenu v-else :items="userMenu" :label="contact.username" :onSelect="handleAction" position="bottom-left">
+          <img :src="contact.avatar" class="w-10 h-10 rounded-full" />
+        </DropdownMenu>
+      </div>
+    </div>
     <div class="flex flex-col">
       <span class="text-sm">{{ contact.name }}</span>
       <span class="text-xs text-gray-400">@{{ contact.username }}</span>
@@ -18,9 +19,8 @@
 
 <script setup lang="ts">
 import {
-  LucideBan, LucideBookmark, LucideEyeOff, LucideHeartPlus,
-  LucideIdCard, LucideMessageCircle, LucideMessageSquareReply,
-  LucideUserMinus
+  LucideBan, LucideBookmark, LucideEyeOff,LucideIdCard, LucideHeartPlus,
+  LucideMessageCircle, LucideMessageSquareReply, LucideUserPlus
 } from 'lucide-vue-next'
 import DropdownMenu from '@/components/base/DropdownMenu.vue'
 import { useUserStore } from '@/stores/user'
@@ -49,10 +49,10 @@ function handleAction(action: string) {
 
 const userMenu = [
   { label: 'Start chat', icon: LucideMessageCircle, route: '/chat/username', value: 'chat' },
+  { label: 'Add friend', icon: LucideUserPlus, value: 'add-friend' },
   { label: 'Add Bookmark', icon: LucideBookmark, value: 'add-bookmark' },
   { label: 'Profile', icon: LucideIdCard, route: '/profile/username', value: 'profile' },
   { label: 'Follow', icon: LucideHeartPlus, value: 'follow' },
-  { label: 'Delete Friend', icon: LucideUserMinus, value: 'delete-friend', danger: true },
   { label: 'Hidden', icon: LucideEyeOff, value: 'hidden', danger: true },
   { label: 'Block', icon: LucideBan, value: 'block', danger: true },
   { label: 'Report', icon: LucideMessageSquareReply, value: 'report', danger: true },
